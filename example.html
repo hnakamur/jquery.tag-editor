@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>tag editor example</title>
+<link rel="stylesheet" href="jquery.tag-editor.css">
+<style>
+.fieldrow {
+  margin-bottom: 8px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+.taglabel {
+  margin-top: 8px;
+  vertical-align: top;
+}
+
+input {
+  width: 200px;
+}
+
+.help {
+  margin: 0 0 0 100px;
+}
+</style>
+</head>
+<body>
+<div class="fieldrow">
+<label class="taglabel">Tags: </label><input name="tags" value="foo,bar,baz">
+<p class="help">Click to edit. Press comma or space to separate tags.</p>
+</div>
+<div class="fieldrow">
+<label class="taglabel">Tags 2: </label><input name="tags2" value="foo,bar,baz">
+</div>
+<div class="fieldrow">
+<label>non-tag field: </label><input name="non_tag" value="foo,bar,baz">
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="jquery.tag-editor.js"></script>
+<script>
+$(function() {
+  $("input[name=tags],input[name=tags2]").tagEditor();
+});
+</script>
+</body>
+</html>
